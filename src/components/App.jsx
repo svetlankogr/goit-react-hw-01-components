@@ -2,10 +2,14 @@ import user from '../data/user';
 import data from '../data/data';
 import friends from '../data/friends';
 import transactions from '../data/transactions';
+
+import { GlobalStyle } from 'utils/GlobalStyles';
+
 import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
 import { FriendList } from './FriendList/FriendList';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+
 export const App = () => {
   return (
     <>
@@ -19,6 +23,7 @@ export const App = () => {
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />;
+      <GlobalStyle />
     </>
   );
 };
